@@ -6,24 +6,34 @@ html(lang="sp")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="style.css")
         link(rel="shortcut icon", href="img/logo.png", type="image/png")
-        title Taller 1 Creaciones Camily
-    body 
-         body body
-         header header 
-                nav nav
-         section section 
-            nav nav
-            aside aside 
-         section section
-            header header
-            article article
-             header header
-             div div 
-             aside aside
-             p p  
-            article article
-             header header
-             div div 
-             p p 
-            footer footer
-         footer footer
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet")
+        title Taller 1 Creaciones Camily 
+    body
+        -let data =[{article: {titulo: "Colección 2021",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Lo más vendido",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"},{article: {titulo: "Promociones del mes",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Siguenos en nuestras redes sociales",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"}];
+        script.
+            console.log(!{JSON.stringify(data)});
+        
+
+        header Header
+            nav Nav
+        section Section
+            nav Nav
+            aside Aside
+        div(class="Caja")
+            mixin sesiones({...arg})
+                each valor, i in arg
+                    section(class="noticias")
+                        header= valor.titulo
+                        article= valor.article.titulo
+                            header= valor.article.header
+                            div= valor.article.div
+                            aside= valor.article.aside
+                            p= valor.article.p
+                        article= valor.article2.titulo
+                            header= valor.article2.header
+                            div= valor.article2.div
+                            p= valor.article2.p
+                            footer= valor.article2.footer
+            +sesiones(data)
+        footer footer
