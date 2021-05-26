@@ -11,15 +11,26 @@ html(lang="sp")
         title Taller 1 Creaciones Camily 
     body
         -let data =[{article: {titulo: "Colección 2021",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Lo más vendido",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"},{article: {titulo: "Promociones del mes",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Siguenos en nuestras redes sociales",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"}];
+        -let menu = {Principal: ["Menu 1","Menu 2","Menu 3","Menu 4"], Sub: ["Sub Menu 1","Sub Menu 2","Sub Menu 3","Sub Menu 4"]};
         script.
             console.log(!{JSON.stringify(data)});
         
-
         header Header
-            nav Nav
-        section Section
-            nav Nav
-            aside Aside
+            mixin Menus({...arg})
+                nav 
+                    ul 
+                        each valor, i in arg
+                            li=valor
+            +Menus(menu.Principal)
+        section
+            mixin Menus2({...arg})
+                nav 
+                    ul 
+                        each valor, i in arg
+                            li=valor
+            +Menus2(menu.Sub)
+            aside 
+                img(src="img/Pruebas.png", alt="", srcset="")
         div(class="Caja")
             mixin sesiones({...arg})
                 each valor, i in arg

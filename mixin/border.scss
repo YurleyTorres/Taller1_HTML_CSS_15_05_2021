@@ -1,0 +1,17 @@
+// $borde_caja_padre: .1em double #fca757;
+// $borde_caja_hija: .1em solid #03a9f4;
+
+$borde_caja_padre: .1em double transparent;
+$borde_caja_hija: .1em solid transparent;
+
+
+@mixin diseño-hija {
+    // background: blue !important;
+    // padding: 20px 0px !important;
+    border: $borde_caja_hija;
+}
+@mixin diseño-padre {
+    // background: blue !important;
+    // padding: 20px 0px !important;
+    border: $borde_caja_padre;
+}

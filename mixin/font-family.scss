@@ -1,0 +1,15 @@
+$fuente: 'Orbitron', sans-serif;
+$fuente_normal: 400;
+$fuente_negrita: 700;
+
+
+@mixin normal {
+    // background: blue !important;
+    font-family: $fuente;
+    font-weight: $fuente_normal;
+}
+@mixin negrita {
+    // background: red !important;
+    font-family: $fuente;
+    font-weight: $fuente_negrita;
+}

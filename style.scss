@@ -1,0 +1,248 @@
+@import 'variables/background.scss';
+@import 'variables/color.scss';
+@import 'mixin/font-family.scss';
+@import 'mixin/border.scss';
+@import 'animaciones/submenus.scss';
+@import 'animaciones/banner.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background: $relleno_body;
+    overflow-x: hidden;
+}
+header{
+    @include negrita;
+    @include diseño-padre;
+    position: fixed;
+    top: -5em;
+    @include MostrarBanner(headerAnimacion);
+    width: 97.7%;
+    text-align: center;
+    padding: .7em .9em;
+    background: $relleno_header;
+    @media only screen and (max-width: 500px)  {
+        position: relative !important;
+        top: 0 !important;
+        z-index: 10 !important;
+        width: 100% !important;
+    }
+    // nav:nth-last-of-type(1){
+    //     background: $relleno_nav_li;
+    //     opacity: .2;
+    // }
+}
+nav{
+    @include normal;
+    @include diseño-hija;
+    // height: 2.3em;
+    text-align: center;
+    /* background: red; */
+    background: $relleno_nav;
+    ul{
+        li{
+            @include diseño-hija;
+            display: inline-block;
+            // float: right;
+            padding: 0.5em;
+            margin: 0 0.7em;
+            transition: all;
+            transition-duration: .5s;
+            @media only screen and (max-width: 500px)  {
+                margin: 0 -.2em;
+            }
+        }
+        li:hover, li:active, li:focus{
+            transition-timing-function: ease;
+            cursor: pointer;
+            color: $colo_menu;
+            background: $relleno_nav_li;
+            opacity: .8;
+        }
+    }
+}
+aside{
+    @include normal;
+    @include diseño-hija;
+    /* background: red; */
+    background: $relleno_aside;
+}
+section{
+    @include diseño-padre;
+    @include negrita;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin: .4em 0;
+    padding: .7em .9em;
+    /* background: red; */
+    background: $relleno_section;
+    position: fixed;
+    top: 15%;
+    width: 30%;
+    margin-right: .5%;
+    left: -35em;
+    @include Mostrar(Mostrar);
+    // left: 0;
+
+    ul{
+        li{
+            // background: red !important;
+            display: block;
+            margin: .7em;
+        }
+    }
+    header{
+        @include normal;
+        @include diseño-hija;
+        position: static;
+        /* background: red; */
+    }
+    aside{
+        /*Adaptar nuesto contemido*/
+            // padding: 50px 0;
+            // padding: .7em;
+            position: relative;
+            width: 99.4%;
+            height: 250px;
+            overflow: hidden;
+            /* background: red; */
+            img{
+                position: absolute;
+                left: 0;
+                padding: .7em 0;
+                z-index: -1;
+                width: 100%;
+            }
+    }
+    div{
+        @include normal;
+        @include diseño-hija;
+        background: $relleno_div;
+
+    }
+    p{
+        @include normal;
+        @include diseño-hija;
+        width: 95.8%;
+        background: $relleno_p;
+    }
+    article{
+        @include negrita;
+        @include diseño-padre;
+        margin: .7em .0;
+        padding: .7em .0;
+        background: $relleno_article;
+        @media only screen and (max-width: 500px)  {
+            padding-left: .7em;
+            padding-right: .7em;
+        }
+    }
+    @media only screen and (max-width: 500px)  {
+        display: none !important;
+    }
+}
+article header, 
+article div, 
+article aside,
+article p,
+article footer{
+    margin: 0;
+    padding: .7em 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 95.8%;
+    @media only screen and (max-width: 500px)  {
+        width: 100%;
+    }
+}
+
+footer{
+    @include negrita;
+    @include diseño-padre;
+    position: fixed;
+    left: 0;
+    @include MostrarBanner(footerAnimacion);
+    bottom: -3em;
+    width: 100%;
+    text-align: center;
+    background: $relleno_footer;
+    padding: .7em 0;
+    @media only screen and (max-width: 500px)  {
+        
+        left: none !important;
+        bottom: 0 !important;
+        width: 100% !important;
+    }
+}
+.Caja{
+    position: absolute;
+    padding-bottom: 7em;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 64.5%;
+    @media only screen and (max-width: 500px)  {
+        position: relative !important;
+        top: -65px !important;
+        left: -2px !important;
+        width: 100% !important;
+        height: 100vh !important;
+        z-index: 5 !important;
+    }
+}
+.noticias{
+    @include diseño-padre;
+    position: relative !important;
+    display: inline-block;
+    top: 4.2em;
+    @include Mostrar(MostrarLateral, .2s);
+    left: 100em;
+    width: 96%;
+    margin-left: .5%;
+    aside{
+        @include diseño-hija;
+        display: inline-block;
+        margin: 0;
+        width: 35%;
+        height: 100%;
+        @media only screen and (max-width: 500px)  {
+            width: 100%;
+        }
+    }
+    article:nth-of-type(1){
+        div:nth-of-type(1){
+            @include diseño-hija;
+            display: inline-block;
+            width: 60%;
+            @media only screen and (max-width: 500px)  {
+                width: 100%;
+            }
+        }
+    }
+    footer{
+        @include normal;
+        @include diseño-hija;
+        position: sticky;
+        display: inline-block;
+        width: 95.8%;
+        background: $relleno_footer;
+    }
+    @media only screen and (max-width: 500px)  {
+        display: inline-block !important;
+        width: 100% !important;
+        left: 0;
+        @include Mostrar(none);
+    }
+}
+.noticias > header{
+    width: 96.6%;
+    @media only screen and (max-width: 500px)  {
+        width: 99.4% !important;
+        padding: 0.7em 0em !important;
+    }
+    /* background: red; */
+}
