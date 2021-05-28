@@ -10,6 +10,20 @@
     padding: 0;
     
 }
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: $relleno_scroll;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: $relleno_scroll;
+}
+::-webkit-scrollbar-track{
+    border-radius: 3px;
+}
 body{
     background: $relleno_body;
     overflow-x: hidden;
@@ -51,19 +65,29 @@ nav{
             margin: 0 0.7em;
             transition: all;
             transition-duration: .5s;
+            &:hover, &:active, &:focus{
+                transition-timing-function: ease;
+                cursor: pointer;
+                color: $colo_menu;
+                background: $relleno_nav_li;
+                opacity: .8;
+            }
             @media only screen and (max-width: 500px)  {
                 margin: 0 -.2em;
+                display: block;
             }
         }
-        li:hover, li:active, li:focus{
-            transition-timing-function: ease;
-            cursor: pointer;
-            color: $colo_menu;
-            background: $relleno_nav_li;
-            opacity: .8;
+        a{
+            text-decoration: none;
+            color: $colo_menu_defaul;
+            &:hover{
+                color: $colo_menu;
+            }
         }
+        
     }
 }
+
 aside{
     @include normal;
     @include diseño-hija;
@@ -73,6 +97,7 @@ aside{
 section{
     @include diseño-padre;
     @include negrita;
+    @include Mostrar(Mostrar);
     text-align: center;
     display: inline-block;
     vertical-align: middle;
@@ -81,13 +106,12 @@ section{
     /* background: red; */
     background: $relleno_section;
     position: fixed;
-    top: 15%;
+    top: 12%;
     width: 30%;
     margin-right: .5%;
     left: -35em;
-    @include Mostrar(Mostrar);
+    
     // left: 0;
-
     ul{
         li{
             // background: red !important;
@@ -129,6 +153,12 @@ section{
         @include diseño-hija;
         width: 95.8%;
         background: $relleno_p;
+        @media only screen and (max-width: 500px)  {
+            img{
+                width: 100%;
+            }
+        }
+        
     }
     article{
         @include negrita;
@@ -136,6 +166,10 @@ section{
         margin: .7em .0;
         padding: .7em .0;
         background: $relleno_article;
+        header{
+            margin: .5em 0;
+            @include negrita;
+        }
         @media only screen and (max-width: 500px)  {
             padding-left: .7em;
             padding-right: .7em;
@@ -171,8 +205,31 @@ footer{
     text-align: center;
     background: $relleno_footer;
     padding: .7em 0;
+    ul{
+        li{
+            display: inline-block;
+        }
+        li:nth-last-child(odd){
+            @include normal;
+        }
+        li:nth-of-type(4){
+            a{
+                color: $whatsapp;
+            }
+        }
+        @media only screen and (max-width: 500px)  {
+            li:nth-last-child(even),
+            li:nth-of-type(2),
+            li:nth-of-type(4){
+                display: none;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
     @media only screen and (max-width: 500px)  {
-        
+        z-index: 10;
         left: none !important;
         bottom: 0 !important;
         width: 100% !important;
@@ -203,12 +260,17 @@ footer{
     left: 100em;
     width: 96%;
     margin-left: .5%;
+    
     aside{
         @include diseño-hija;
         display: inline-block;
         margin: 0;
         width: 35%;
         height: 100%;
+        iframe{
+            width: 100%;
+            height: 220px;
+        }
         @media only screen and (max-width: 500px)  {
             width: 100%;
         }
@@ -218,9 +280,21 @@ footer{
             @include diseño-hija;
             display: inline-block;
             width: 60%;
+            text-align: justify;
             @media only screen and (max-width: 500px)  {
                 width: 100%;
             }
+        }
+    }
+    article:nth-of-type(2){
+        div{
+            @include negrita;
+        }
+        footer{
+            position: relative;
+        }
+        p{
+            text-align: justify;
         }
     }
     footer{
@@ -240,6 +314,7 @@ footer{
 }
 .noticias > header{
     width: 96.6%;
+    @include negrita;
     @media only screen and (max-width: 500px)  {
         width: 99.4% !important;
         padding: 0.7em 0em !important;

@@ -6,12 +6,14 @@ html(lang="sp")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="style.css")
         link(rel="shortcut icon", href="img/logo.png", type="image/png")
+        
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet")
         title Taller 1 Creaciones Camily 
     body
-        -let data =[{article: {titulo: "Colección 2021",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Lo más vendido",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"},{article: {titulo: "Promociones del mes",header: "1",div: "2",aside: "3",p: "4" },article2: {titulo: "Siguenos en nuestras redes sociales",header: "awd",div: "4",p: "6",footer: "7" },titulo: "Ultimas noticias"}];
-        -let menu = {Principal: ["Menu 1","Menu 2","Menu 3","Menu 4"], Sub: ["Sub Menu 1","Sub Menu 2","Sub Menu 3","Sub Menu 4"]};
+        //-let data = link(rel="stylesheet", href="informacion.js")
+        -let data=[{titulo:"Xataka",article:{titulo:"",header:"Elon Musk anuncia que la primera misión tripulada a Marte de SpaceX será en 2024 'si hay suerte' o 'seguramente' en 2026",div:"Según apuntaban fotografías de la NASA, SpaceX lleva varios años estudiando posibles sitios donde aterrizar su Starship. Sea en 2024 o 2026, el viaje a Marte no será precisamente económico, aunque el propio Musk pronosticaba hace un año que el coste estaría por debajo de los 500.000 dólares. La nave Starship mide 50 metros de altura y se lanzaría sobre el sistema Super Heavy. El plan, según ha descrito SpaceX en ocasiones anteriores, pasa por enviar estas naves reutilizables. Por el momento disponen de varios prototipos, siendo el último de ellos la Starship SN8, que cuenta con tres motores y será probado próximamente (el 4 de diciembre) con un vuelo de hasta 15 kilómetros.",aside:"https://www.youtube.com/embed/AF2HXId2Xhg",p:{src:"https://i.blogs.es/161e78/spacex/450_1000.jpg",title:"La primera misión para enviar humanos a Marte podría estar cerca. 'Si hay suerte', será en 2024, según ha afirmado Elon Musk en una entrevista en Berlín con Axel Springer. La fecha coincide con lo que hace años viene prometiendo el CEO de SpaceX, que apuntaba que en un plazo de diez años lograríamos enviar personas al planeta rojo."}},article2:{titulo:"BBC NEWS | MUNDO",header:"El Perseverance llega a Marte: por qué 3 misiones de tres países diferentes llegaron al planeta rojo casi al mismo tiempo",div:"Febrero ha sido un mes decisivo para la exploración de Marte.",p:'Este jueves el robot explorador Perseverance de la NASA llegó a Marte, tras un viaje de cerca de 480 millones de km que inició en julio de 2020. El Perseverance descendió hasta la superficie marciana sujetado por una "grúa celestial". Para ello sobrevivió a los llamados "siete minutos de terror", el período de ingreso y descenso en la atmósfera marciana en que la temperatura y el riesgo eran máximos.',footer:{src:"https://www.bbc.com/mundo/noticias-55990181",title:"bbc.com/mundo/noticias"}}}];
+        -let menu = {Principal: [{name:"Noticias",des:""},{name:"Publicaciones", des:"https://www.facebook.com/pg/CamilyCreaciones/posts/?ref=page_internal"},{name:"Fotos",des:" https://www.facebook.com/CamilyCreaciones/photos/?ref=page_internal"},{name:"Videos",des:"https://www.facebook.com/CamilyCreaciones/videos"}], Sub:[{name:"Catálogo Línea Bebé", des: "https://www.flipsnack.com/creacionescamilycatalogo/cat-logo-creaciones-camily-2021.html"},{name:"Catálogo Línea Junior",des: "https://www.flipsnack.com/creacionescamilycatalogo/cat-logo-l-nea-junior-creaciones-camily-2021.html"},{name:"Catálogo Línea Niño",des:""},{name:"Catálogo Ceremonia",des:"https://www.flipsnack.com/creacionescamilycatalogo/cat-logo-ceremonia-y-ni-o-creaciones-camily-2021.html"}]};
         script.
             console.log(!{JSON.stringify(data)});
         
@@ -20,14 +22,16 @@ html(lang="sp")
                 nav 
                     ul 
                         each valor, i in arg
-                            li=valor
+                            li 
+                                a(href=""+valor.des target="_blanck")=valor.name
             +Menus(menu.Principal)
         section
             mixin Menus2({...arg})
                 nav 
                     ul 
                         each valor, i in arg
-                            li=valor
+                            li 
+                                a(href=""+valor.des target="_blanck")=valor.name
             +Menus2(menu.Sub)
             aside 
                 img(src="img/Pruebas.png", alt="", srcset="")
@@ -47,4 +51,12 @@ html(lang="sp")
                             p= valor.article2.p
                             footer= valor.article2.footer
             +sesiones(data)
-        footer footer
+        footer
+            ul 
+                li Nombre: 
+                li Marly Yurley Torres Silva |
+                li Telefono: 
+                li #[a(href="tel:+57 3016737252") +57 3016737252] |
+                    
+                li Diplomado Comfenalco: 
+                li HTML CON PUG Y CSS CON SASS
