@@ -1,8 +1,10 @@
-@mixin Mostrar($animacion, $demora:0s){
+@mixin Mostrar($animacion,$demora:0s,$count:1,$direcion:normal){
     animation-name: $animacion;
     animation-duration: 1s;
     animation-delay: $demora;
+    animation-iteration-count: $count;
     animation-timing-function: linear;
+    animation-direction: $direcion;
     animation-fill-mode: forwards;
 }
 @keyframes Mostrar{
@@ -37,5 +39,37 @@
     }
     100%{
         left: 0em;
+    }
+}
+@keyframes parpadeo{
+    0%{
+        box-shadow: 
+        0px 0px 10px $whatsapp,
+        0px 0px 10px $whatsapp,
+        0px 0px 10px $whatsapp;
+    }
+    25%{
+        box-shadow: 
+        0px 0px 15px $whatsapp,
+        0px 0px 15px $whatsapp,
+        0px 0px 15px $whatsapp;
+    }
+    50%{
+        box-shadow: 
+        0px 0px 18px $whatsapp,
+        0px 0px 18px $whatsapp,
+        0px 0px 18px $whatsapp;
+    }
+    75%{
+        box-shadow: 
+        0px 0px 15px $whatsapp,
+        0px 0px 15px $whatsapp,
+        0px 0px 15px $whatsapp;
+    }
+    100%{
+        box-shadow: 
+        0px 0px 10px $whatsapp,
+        0px 0px 10px $whatsapp,
+        0px 0px 10px $whatsapp;
     }
 }
