@@ -8,7 +8,7 @@ html(lang="sp")
         meta(name="description" content="✌ ✌ Conjuntos y camisas guayaberas para toda ocasión para bebes, niños y caballeros. Escríbenos Whatsaap 3182659135 - +76940085 o Visitanos en nuestro punto de fabrica Carrera 23 A # 101 -27 Barrio Provenza.")
         meta(property="og:image" content="https://www.facebook.com/CamilyCreaciones/photos/a.1885363338421698/1885365361754829/")
         meta(property="og:url" content="https://www.facebook.com/CamilyCreaciones/videos/1885422355082463")
-        meta(property="og:video" content="https://www.facebook.com/CamilyCreaciones/videos/1885422355082463")
+        meta(property="og:video" content="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FCamilyCreaciones%2Fvideos%2F1885422355082463%2F&show_text=false&width=373&t=0")
         meta(property="og:title" content="🌟 Creaciones Camily 🌟")
         meta(property="og:description" content="(っ＾▿＾)۶🌟٩(˘◡˘ ) Conjuntos y camisas guayaberas para toda ocasión para bebes, niños y caballeros. Escríbenos Whatsaap 3182659135 - +76940085 o Visitanos en nuestro punto de fabrica Carrera 23 A # 101 -27 Barrio Provenza.")
         link(rel="stylesheet", href="style.css")
@@ -22,8 +22,7 @@ html(lang="sp")
         script.
             console.log(!{JSON.stringify(data)});
         
-        header Header
-            //- img(src="img/Pruebas.png", alt="", srcset="")
+        header             
             mixin Menus({...arg})
                 nav 
                     ul 
@@ -31,6 +30,23 @@ html(lang="sp")
                             li 
                                 a(href=""+valor.des target="_blanck")=valor.name
             +Menus(menu.Principal)
+            img(src="img/Header2.png", alt="", srcset="")
+            div.Flores1
+                img(src="img/1.png" )
+            div.Flores2
+                img(src="img/2.png" )
+            div.Flores3
+                img(src="img/5.png")
+            div.Flores4
+                img(src="img/6.png" )
+            //- div.Flores5
+            //-     img(src="img/3.png" width="100")
+            //- div.Flores6
+            //-     img(src="img/3.png" width="100")
+            //- div.Flores7
+            //-     img(src="img/3.png" width="100")
+            //- div.Flores8
+            //-     img(src="img/3.png" width="100")
         section
             mixin Menus2({...arg})
                 nav 
@@ -50,27 +66,56 @@ html(lang="sp")
                         article= valor.article.titulo
                             header= valor.article.header
                             div= valor.article.div
+                                p 
+                                    img(src=""+valor.article.p.src, title=""+valor.article.p.title)
                             aside
                                 //- iframe(src=""+valor.article.aside seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen)
-                                iframe(src=""+valor.article.aside  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true")
+                                iframe(src=""+valor.article.aside width="373" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true")
                                 //- iframe(src=""+valor.article.aside frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                            p 
-                                img(src=""+valor.article.p.src, title=""+valor.article.p.title)
+
                         article= valor.article2.titulo
                             header= valor.article2.header
                             div= valor.article2.div
                             p= valor.article2.p
                             footer 
                                 p
-                                img(src=""+valor.article2.footer.src, title=""+valor.article2.footer.title)
+                                    img(src=""+valor.article2.footer.src, title=""+valor.article2.footer.title)
             +sesiones(data)
         div.burbujaWhatsapp
              a(href="https://api.whatsapp.com/send?phone=+573213800360&text=Quiero tener más informacion de los productos&image=https://www.facebook.com/CamilyCreaciones/photos/a.1885363338421698/1885365361754829/", target="_blanck") 
                 img(src="img/wp.png")
         div.Dino1
-            img(src="img/Dino4.png" width="100")
+            img(src="img/Dino1.png" width="100")
         div.Dino2
             img(src="img/Dino2.png" width="100")
+        div.Dino3
+            img(src="img/Dino3.png" width="100")
+        div.Dino4
+            img(src="img/Dino4.png" width="100")
+        div.Pasto1
+            img(src="img/Pasto1.png" width="100")
+            img(src="img/Pasto2.png" width="100")
+            img(src="img/Pasto3.png" width="100")
+            img(src="img/Pasto1.png" width="100")
+            img(src="img/Pasto2.png" width="100")
+            img(src="img/Pasto3.png" width="100")
+            img(src="img/Pasto1.png" width="100")
+            img(src="img/Pasto2.png" width="100")
+            img(src="img/Pasto3.png" width="100")
+            img(src="img/Pasto1.png" width="100")
+            img(src="img/Pasto2.png" width="100")
+            img(src="img/Pasto3.png" width="100")
+            img(src="img/Pasto1.png" width="100")
+            img(src="img/Pasto2.png" width="100")
+            img(src="img/Pasto3.png" width="100")
+            img(src="img/Pasto1.png" width="100")
+            img(src="img/Pasto4.png" width="80")
+            
+           
+            
+
+           
+
         footer
             
             ul 

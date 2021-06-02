@@ -35,6 +35,7 @@ header{
     top: -5em;
     @include MostrarBanner(headerAnimacion);
     width: 97.7%;
+    height: 90px;
     text-align: center;
     padding: .7em .9em;
     background: $relleno_header;
@@ -44,11 +45,74 @@ header{
         z-index: 10 !important;
         width: 100% !important;
     }
+    img{
+        object-fit: scale-down;
+        top: 4px !important;
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        left: -25%;
+    }
+        // img{
+        //     height: 200px;
+        // }
+    
+ 
     // nav:nth-last-of-type(1){
     //     background: $relleno_nav_li;
     //     opacity: .2;
     // }
 }
+.Flores1{
+    // object-fit: scale-down;
+    position: absolute;
+    bottom: .2em;
+    left: 200px;
+    width: 100%;
+    z-index: 1;
+    
+    @media only screen and (max-width: 500px)  {
+        bottom: -55px;
+    }
+}
+.Flores2{
+    // object-fit: scale-down;
+    position: absolute;
+    bottom: 2.5em;
+    left: -100px;
+    width: 100%;
+    z-index: 1;
+    
+    @media only screen and (max-width: 500px)  {
+        bottom: -55px;
+    }
+}
+.Flores3{
+    // object-fit: scale-down;
+    position: absolute;
+    bottom: 7em;
+    left: 800px;
+    width: 100%;
+    z-index: 1;
+
+    @media only screen and (max-width: 500px)  {
+        bottom: -55px;
+    }
+}
+.Flores4{
+    // object-fit: scale-down;
+    position: absolute;
+    bottom: 2.5em;
+    left: 1080px;
+    width: 100%;
+    z-index: 1;
+
+    @media only screen and (max-width: 500px)  {
+        bottom: -55px;
+    }
+}
+
+
 nav{
     @include normal;
     @include diseño-hija;
@@ -106,7 +170,7 @@ section{
     /* background: red; */
     background: $relleno_section;
     position: fixed;
-    top: 13.5%;
+    top: 6.7em;
     width: 30%;
     margin-right: .5%;
     left: -35em;
@@ -123,6 +187,7 @@ section{
         @include normal;
         @include diseño-hija;
         position: static;
+        height: 10px!important;
         /* background: red; */
     }
     aside{
@@ -148,7 +213,39 @@ section{
         @include normal;
         @include diseño-hija;
         background: $relleno_div;
+    
+        p{
+            @include normal;
+            @include diseño-hija;
+            width: 500px !important;
+            height: 350px;
+        // overflow: hidden;
+            position: relative;
+            background: $relleno_p;
+        // padding: 0 15em;
+            img{
+                object-fit: scale-down;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+            }
+        @media only screen and (max-width: 500px)  {
+            width: 100% !important;
+            height: none !important;
+            img{
+                object-fit: scale-down !important;
+                object-position: 0 -40px;
 
+                // object-position: 10px;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                left: 0;
+                
+            }
+        }
+    }
     }
     
     article{
@@ -161,6 +258,7 @@ section{
         header{
             margin: .5em 0;
             @include negrita;
+            height: 30px!important;
         }
         @media only screen and (max-width: 500px)  {
             padding-left: .7em;
@@ -183,7 +281,6 @@ article div{
     }
 }
 article header, 
-
 article aside,
 article p,
 article footer{
@@ -298,7 +395,7 @@ footer{
             position: relative;
         }
         p{
-            text-align: justify;
+            text-align: justify; 
         }
     }
     footer{
@@ -307,13 +404,39 @@ footer{
         position: sticky;
         display: inline-block;
         width: 95.8%;
-        background: $relleno_footer;
+        background: none !important;
+        p{ 
+            @include normal;
+            @include diseño-hija;
+            width: 500px !important;
+            height: 250px;
+                    // overflow: hidden;
+            position: relative;
+            background: $relleno_p;
+                    // padding: 0 15em;
+            img{
+                object-fit: scale-down;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                }
+            }
+            @media only screen and (max-width: 500px)  {
+                width: 100% !important;
+                height: none !important;
+                img{
+                    position: relative !important;
+                    left: 0;
+                        }
+                    }
     }
     @media only screen and (max-width: 500px)  {
         display: inline-block !important;
         width: 100% !important;
         left: 0;
         @include Mostrar(none);
+        
     }
 }
 .noticias > header{
@@ -336,39 +459,103 @@ footer{
     @include Mostrar(parpadeo, 0s,infinite,alternate-reverse);
     width: 38px;
     height: 38px;
-}
-.Dino2{
-    position: fixed;
-    bottom: 2.5em;
-    left: 5px;
-    width: 100%;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction:reverse;
-    animation-name: mover;
+    z-index: 10;
 }
 .Dino1{
     position: fixed;
     bottom: 2.5em;
     left: 0%;
     width: 100%;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction:reverse;
-    // animation-name: mover;
+    z-index: 5;
+    animation-name: mover;
 }
+.Dino2{
+    position: fixed;
+    bottom: 2.5em;
+    left: 0%;
+    width: 100%;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:reverse;
+    animation-name: mover;
+    z-index: 5;
+}
+.Dino3{
+    position: fixed;
+    bottom: 2.5em;
+    left: 0%;
+    width: 100%;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:reverse;
+    animation-name: mover;
+    z-index: 5;
+}
+.Dino4{
+    position: fixed;
+    bottom: 2.5em;
+    left: 0%;
+    width: 100%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:reverse;
+    animation-name: mover;
+    z-index: 5;
+}
+.Pasto1{
+    
+    position: fixed;
+    bottom: 2.5em;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    @media only screen and (max-width: 500px)  {
+        bottom: -55px;
+    }
+    // img{
+    //     height: 200px;
+    // }
 
+}
 @keyframes mover{ 
     0%{
         left: 0%;
     }
+    25%{
+        left: 25%;
+        z-index: 10;
+    }
     50%{
         left: 50%;
+    }
+    75%{
+        left: 75%;
+        z-index: 10;
     }
     100%{
         left: 100%;
     }
+
+}
+
+@keyframes moverflores{ 
+    100%{
+        bottom: 100%;
+
+    }
+    90%{
+        bottom: 90%;
+    }
+    85%{
+        bottom: 85%;
+    }
+   
 
 }
