@@ -40,6 +40,7 @@ header{
     text-align: center;
     padding: .7em .9em;
     background: $relleno_header;
+    z-index: 10;
     @media only screen and (max-width: 500px)  {
         position: relative !important;
         top: 0 !important;
@@ -79,18 +80,19 @@ header{
         left: -25%;
     
 }
-.Flores1{
-    // object-fit: scale-down;
-    position: relative;
-    bottom: 3.5em;
-    left: 442px;
-    width: 100%;
-    z-index: 1;
-    
-    @media only screen and (max-width: 500px)  {
-        bottom: -55px;
-    }
-}
+// .Flores1{
+//     // object-fit: scale-down;
+//     position: relative;
+//     bottom: 3.5em;
+//     left: 442px;
+//     width: 100%;
+//     z-index: 1;
+
+//     @media only screen and (max-width: 500px)  {
+//         bottom: 1.5em;
+//         left: 147px;
+//     }
+// }
 .Flores2{
     // object-fit: scale-down;
     position: relative;
@@ -112,7 +114,8 @@ header{
     z-index: 1;
 
     @media only screen and (max-width: 500px)  {
-        bottom: -55px;
+        bottom: 300px;
+        left: 35%;
     }
 }
 .Flores4{
@@ -123,9 +126,6 @@ header{
     width: 100%;
     z-index: 1;
 
-    @media only screen and (max-width: 500px)  {
-        bottom: -55px;
-    }
 }
 
 
@@ -325,6 +325,7 @@ footer{
     text-align: center;
     background: $relleno_footer;
     padding: .2em 0;
+    z-index: 15;
     ul{
         li{
             display: inline-block;
@@ -360,7 +361,7 @@ footer{
     padding-bottom: 7em;
     top: 0em;
     right: 0;
-    z-index: -1;
+    z-index: 5;
     width: 64.5%;
     @media only screen and (max-width: 500px)  {
         position: relative !important;
@@ -479,6 +480,10 @@ footer{
     width: 38px;
     height: 38px;
     z-index: 10;
+    @media only screen and (max-width: 500px)  {
+        bottom: 2.5em;
+        right: 9em;
+    }
 }
 .Dino1{
     position: fixed;
@@ -489,8 +494,12 @@ footer{
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction:reverse;
-    z-index: 5;
+    z-index: 8;
     animation-name: mover;
+    @media only screen and (max-width: 500px){
+        width: 60% !important;
+        left: 60% !important;
+    }
 }
 .Dino2{
     position: fixed;
@@ -502,7 +511,11 @@ footer{
     animation-timing-function: ease-in-out;
     animation-direction:reverse;
     animation-name: mover;
-    z-index: 5;
+    z-index: 8;
+    @media only screen and (max-width: 500px){
+        width: 60% !important;
+        left: 60% !important;
+    }
 }
 .Dino3{
     position: fixed;
@@ -514,7 +527,11 @@ footer{
     animation-timing-function: ease-in-out;
     animation-direction:reverse;
     animation-name: mover;
-    z-index: 5;
+    z-index: 8;
+    @media only screen and (max-width: 500px){
+        width: 60% !important;
+        left: 60% !important;
+    }
 }
 .Dino4{
     position: fixed;
@@ -526,7 +543,13 @@ footer{
     animation-timing-function: ease-in-out;
     animation-direction:reverse;
     animation-name: mover;
-    z-index: 5;
+    z-index: 8;
+    @media only screen and (max-width: 500px){
+        width: 60% !important;
+        left: 60% !important;
+        animation-duration: 5s !important;
+        animation-name: mover2 !important;
+    }
 }
 .Pasto1{
     
@@ -535,8 +558,11 @@ footer{
     left: 0;
     width: 100%;
     z-index: 10;
+    @include MostrarBanner(footerAnimacion);
     @media only screen and (max-width: 500px)  {
         bottom: -55px;
+        width: 70.5% !important;
+        height: 12.5% !important;
     }
     // img{
     //     height: 200px;
@@ -563,18 +589,23 @@ footer{
     }
 
 }
-
-@keyframes moverflores{ 
+@keyframes mover2{ 
+    0%{
+        left: 0%;
+    }
+    25%{
+        left: 25%;
+        z-index: 10;
+    }
+    50%{
+        left: 50%;
+    }
+    75%{
+        left: 55%;
+        z-index: 10;
+    }
     100%{
-        bottom: 100%;
-
+        left: 60%;
     }
-    90%{
-        bottom: 90%;
-    }
-    85%{
-        bottom: 85%;
-    }
-   
 
 }

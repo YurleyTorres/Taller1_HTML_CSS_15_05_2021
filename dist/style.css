@@ -192,6 +192,7 @@ header {
   text-align: center;
   padding: 0.7em 0.9em;
   background: #fdfdfd;
+  z-index: 10;
 }
 @media only screen and (max-width: 500px) {
   header {
@@ -225,19 +226,6 @@ header {
   left: -25%;
 }
 
-.Flores1 {
-  position: relative;
-  bottom: 3.5em;
-  left: 442px;
-  width: 100%;
-  z-index: 1;
-}
-@media only screen and (max-width: 500px) {
-  .Flores1 {
-    bottom: -55px;
-  }
-}
-
 .Flores2 {
   position: relative;
   bottom: 4.5em;
@@ -260,7 +248,8 @@ header {
 }
 @media only screen and (max-width: 500px) {
   .Flores3 {
-    bottom: -55px;
+    bottom: 300px;
+    left: 35%;
   }
 }
 
@@ -270,11 +259,6 @@ header {
   left: 153px;
   width: 100%;
   z-index: 1;
-}
-@media only screen and (max-width: 500px) {
-  .Flores4 {
-    bottom: -55px;
-  }
 }
 
 nav {
@@ -505,6 +489,7 @@ footer {
   text-align: center;
   background: #fdfdfd;
   padding: 0.2em 0;
+  z-index: 15;
 }
 footer ul li {
   display: inline-block;
@@ -540,7 +525,7 @@ footer a {
   padding-bottom: 7em;
   top: 0em;
   right: 0;
-  z-index: -1;
+  z-index: 5;
   width: 64.5%;
 }
 @media only screen and (max-width: 500px) {
@@ -708,6 +693,12 @@ footer a {
   height: 38px;
   z-index: 10;
 }
+@media only screen and (max-width: 500px) {
+  .burbujaWhatsapp {
+    bottom: 2.5em;
+    right: 9em;
+  }
+}
 
 .Dino1 {
   position: fixed;
@@ -721,9 +712,15 @@ footer a {
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   animation-direction: reverse;
-  z-index: 5;
+  z-index: 8;
   -webkit-animation-name: mover;
           animation-name: mover;
+}
+@media only screen and (max-width: 500px) {
+  .Dino1 {
+    width: 60% !important;
+    left: 60% !important;
+  }
 }
 
 .Dino2 {
@@ -740,7 +737,13 @@ footer a {
   animation-direction: reverse;
   -webkit-animation-name: mover;
           animation-name: mover;
-  z-index: 5;
+  z-index: 8;
+}
+@media only screen and (max-width: 500px) {
+  .Dino2 {
+    width: 60% !important;
+    left: 60% !important;
+  }
 }
 
 .Dino3 {
@@ -757,7 +760,13 @@ footer a {
   animation-direction: reverse;
   -webkit-animation-name: mover;
           animation-name: mover;
-  z-index: 5;
+  z-index: 8;
+}
+@media only screen and (max-width: 500px) {
+  .Dino3 {
+    width: 60% !important;
+    left: 60% !important;
+  }
 }
 
 .Dino4 {
@@ -774,7 +783,17 @@ footer a {
   animation-direction: reverse;
   -webkit-animation-name: mover;
           animation-name: mover;
-  z-index: 5;
+  z-index: 8;
+}
+@media only screen and (max-width: 500px) {
+  .Dino4 {
+    width: 60% !important;
+    left: 60% !important;
+    -webkit-animation-duration: 5s !important;
+            animation-duration: 5s !important;
+    -webkit-animation-name: mover2 !important;
+            animation-name: mover2 !important;
+  }
 }
 
 .Pasto1 {
@@ -783,10 +802,22 @@ footer a {
   left: 0;
   width: 100%;
   z-index: 10;
+  -webkit-animation-name: footerAnimacion;
+          animation-name: footerAnimacion;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media only screen and (max-width: 500px) {
   .Pasto1 {
     bottom: -55px;
+    width: 70.5% !important;
+    height: 12.5% !important;
   }
 }
 
@@ -829,25 +860,41 @@ footer a {
     left: 100%;
   }
 }
-@-webkit-keyframes moverflores {
+@-webkit-keyframes mover2 {
+  0% {
+    left: 0%;
+  }
+  25% {
+    left: 25%;
+    z-index: 10;
+  }
+  50% {
+    left: 50%;
+  }
+  75% {
+    left: 55%;
+    z-index: 10;
+  }
   100% {
-    bottom: 100%;
-  }
-  90% {
-    bottom: 90%;
-  }
-  85% {
-    bottom: 85%;
+    left: 60%;
   }
 }
-@keyframes moverflores {
+@keyframes mover2 {
+  0% {
+    left: 0%;
+  }
+  25% {
+    left: 25%;
+    z-index: 10;
+  }
+  50% {
+    left: 50%;
+  }
+  75% {
+    left: 55%;
+    z-index: 10;
+  }
   100% {
-    bottom: 100%;
-  }
-  90% {
-    bottom: 90%;
-  }
-  85% {
-    bottom: 85%;
+    left: 60%;
   }
 }
