@@ -166,12 +166,13 @@
 }
 
 body {
+  font-size: 1.7em;
   background: #fdfdfd;
   overflow-x: hidden;
 }
 
 header {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
   border: 0.1em double #00D5E2;
   position: fixed;
@@ -200,20 +201,34 @@ header {
     width: 100% !important;
   }
 }
-header img {
+
+.Imagenes {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+.Imagenes div img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  width: 100%;
+  height: 90px;
+}
+
+.Logo {
   -o-object-fit: scale-down;
      object-fit: scale-down;
   top: 4px !important;
   width: 100%;
   height: 90px;
-  position: absolute;
+  position: relative;
   left: -25%;
 }
 
 .Flores1 {
-  position: absolute;
-  bottom: 0.2em;
-  left: 200px;
+  position: relative;
+  bottom: 3.5em;
+  left: 442px;
   width: 100%;
   z-index: 1;
 }
@@ -224,9 +239,9 @@ header img {
 }
 
 .Flores2 {
-  position: absolute;
-  bottom: 2.5em;
-  left: -100px;
+  position: relative;
+  bottom: 4.5em;
+  left: -141px;
   width: 100%;
   z-index: 1;
 }
@@ -237,9 +252,9 @@ header img {
 }
 
 .Flores3 {
-  position: absolute;
-  bottom: 7em;
-  left: 800px;
+  position: relative;
+  bottom: 8.5em;
+  left: 562px;
   width: 100%;
   z-index: 1;
 }
@@ -250,9 +265,9 @@ header img {
 }
 
 .Flores4 {
-  position: absolute;
-  bottom: 2.5em;
-  left: 1080px;
+  position: relative;
+  bottom: 15.5em;
+  left: 153px;
   width: 100%;
   z-index: 1;
 }
@@ -263,9 +278,11 @@ header img {
 }
 
 nav {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
+  position: static;
+  z-index: 10;
   text-align: center;
   /* background: red; */
   background: #673ab705;
@@ -303,7 +320,7 @@ nav ul a:hover {
 }
 
 aside {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   /* background: red; */
@@ -312,7 +329,7 @@ aside {
 
 section {
   border: 0.1em double #00D5E2;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
   -webkit-animation-name: Mostrar;
           animation-name: Mostrar;
@@ -336,7 +353,7 @@ section {
   /* background: red; */
   background: rgba(243, 250, 250, 0.527);
   position: fixed;
-  top: 6.7em;
+  top: 4.44em;
   width: 30%;
   margin-right: 0.5%;
   left: -35em;
@@ -346,7 +363,7 @@ section ul li {
   margin: 0.7em;
 }
 section header {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   position: static;
@@ -370,13 +387,13 @@ section aside img {
   width: 60%;
 }
 section div {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   background: transparent;
 }
 section div p {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   width: 500px !important;
@@ -409,7 +426,7 @@ section div p img {
   }
 }
 section article {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
   border: 0.1em double #00D5E2;
   margin: 0.7em 0;
@@ -418,9 +435,10 @@ section article {
 }
 section article header {
   margin: 0.5em 0;
-  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
-  height: 30px !important;
+  height: 120px !important;
 }
 @media only screen and (max-width: 500px) {
   section article {
@@ -439,7 +457,6 @@ article div {
   padding: 0.7em 0;
   display: inline-block;
   vertical-align: top;
-  font-size: 2em;
   width: 95.8%;
 }
 @media only screen and (max-width: 500px) {
@@ -468,7 +485,7 @@ article footer {
 }
 
 footer {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
   border: 0.1em double #00D5E2;
   position: fixed;
@@ -487,13 +504,13 @@ footer {
   width: 100%;
   text-align: center;
   background: #fdfdfd;
-  padding: 0.7em 0;
+  padding: 0.2em 0;
 }
 footer ul li {
   display: inline-block;
 }
 footer ul li:nth-last-child(odd) {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
 }
 footer ul li:nth-of-type(4) a {
@@ -521,7 +538,7 @@ footer a {
 .Caja {
   position: absolute;
   padding-bottom: 7em;
-  top: 1em;
+  top: 0em;
   right: 0;
   z-index: -1;
   width: 64.5%;
@@ -588,7 +605,7 @@ footer a {
   }
 }
 .noticias article:nth-of-type(2) div {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
 }
 .noticias article:nth-of-type(2) footer {
@@ -598,7 +615,7 @@ footer a {
   text-align: justify;
 }
 .noticias footer {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   position: sticky;
@@ -607,7 +624,7 @@ footer a {
   background: none !important;
 }
 .noticias footer p {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   width: 500px !important;
@@ -656,8 +673,8 @@ footer a {
 }
 
 .noticias > header {
-  width: 96.6%;
-  font-family: "Orbitron", sans-serif;
+  width: 92.6%;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 700;
   /* background: red; */
 }
@@ -672,7 +689,7 @@ footer a {
   position: fixed;
   cursor: pointer;
   right: 1em;
-  bottom: 4em;
+  bottom: 3.5em;
   border-radius: 100%;
   -webkit-animation-name: parpadeo;
           animation-name: parpadeo;
@@ -694,7 +711,7 @@ footer a {
 
 .Dino1 {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 1.9em;
   left: 0%;
   width: 100%;
   -webkit-animation-duration: 15s;
@@ -711,7 +728,7 @@ footer a {
 
 .Dino2 {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 1.9em;
   left: 0%;
   width: 100%;
   -webkit-animation-duration: 20s;
@@ -728,7 +745,7 @@ footer a {
 
 .Dino3 {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 1.9em;
   left: 0%;
   width: 100%;
   -webkit-animation-duration: 25s;
@@ -745,7 +762,7 @@ footer a {
 
 .Dino4 {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 1.9em;
   left: 0%;
   width: 100%;
   -webkit-animation-duration: 30s;
@@ -762,7 +779,7 @@ footer a {
 
 .Pasto1 {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 1.9em;
   left: 0;
   width: 100%;
   z-index: 10;

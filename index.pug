@@ -6,15 +6,15 @@ html(lang="sp")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(name="title" content="🌟 Creaciones Camily 🌟")
         meta(name="description" content="✌ ✌ Conjuntos y camisas guayaberas para toda ocasión para bebes, niños y caballeros. Escríbenos Whatsaap 3182659135 - +76940085 o Visitanos en nuestro punto de fabrica Carrera 23 A # 101 -27 Barrio Provenza.")
-        meta(property="og:image" content="https://www.facebook.com/CamilyCreaciones/photos/a.1885363338421698/1885365361754829/")
-        meta(property="og:url" content="https://www.facebook.com/CamilyCreaciones/videos/1885422355082463")
-        meta(property="og:video" content="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FCamilyCreaciones%2Fvideos%2F1885422355082463%2F&show_text=false&width=373&t=0")
+        meta(property="og:image" content="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCamilyCreaciones%2Fphotos%2Fa.1885363338421698%2F1885365361754829%2F&show_text=true&width=500")
+        meta(property="og:url" content="https://www.facebook.com/CamilyCreaciones/")
+        meta(property="og:video" content="https://youtu.be/rwql_VWoGKM")
         meta(property="og:title" content="🌟 Creaciones Camily 🌟")
         meta(property="og:description" content="(っ＾▿＾)۶🌟٩(˘◡˘ ) Conjuntos y camisas guayaberas para toda ocasión para bebes, niños y caballeros. Escríbenos Whatsaap 3182659135 - +76940085 o Visitanos en nuestro punto de fabrica Carrera 23 A # 101 -27 Barrio Provenza.")
         link(rel="stylesheet", href="style.css")
         link(rel="shortcut icon", href="img/Pruebas2.png", type="image/png") 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet")
         title Creaciones Camily 🌟
     body
         -let data=[{titulo:"Creaciones Camily",article:{titulo:"",header:"QUIENES SOMOS",div:"Creaciones Camily es una microempresa colombiana que fabrica ropa infantil, tenemos 15 años de experiencia en el mercado, distribuimos en todas las ciudades del país y siempre entregamos prendas de excelente calidad, a buen precio y con diseños hermosos.",aside:"https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FCamilyCreaciones%2Fvideos%2F1885422355082463%2F&show_text=false&width=373&t=0",p:{src:"img/Imagen3.jpg",title:"Tenemos una colección llena de color para los peques"}},article2:{titulo:"Elige la talla de ropa IDEAL para tus hijos",header:"Lo primero que debes diferenciar y entender, es que las tallas para bebé y para niños, son distintas.  Las tallas entre 0 y 3 años son para bebés y es medida por meses , las tallas infantiles son de 3 a 7 años.",div:"Tallas para Bebe Niña",p:" Con este cuadro de medidas puedes elegir tu talla correcta",footer:{src:"img/TallasBebe.jpg",title:"Tallaje bebe"}}}];
@@ -30,23 +30,18 @@ html(lang="sp")
                             li 
                                 a(href=""+valor.des target="_blanck")=valor.name
             +Menus(menu.Principal)
-            img(src="img/Header2.png", alt="", srcset="")
-            div.Flores1
-                img(src="img/1.png" )
-            div.Flores2
-                img(src="img/2.png" )
-            div.Flores3
-                img(src="img/5.png")
-            div.Flores4
-                img(src="img/6.png" )
-            //- div.Flores5
-            //-     img(src="img/3.png" width="100")
-            //- div.Flores6
-            //-     img(src="img/3.png" width="100")
-            //- div.Flores7
-            //-     img(src="img/3.png" width="100")
-            //- div.Flores8
-            //-     img(src="img/3.png" width="100")
+            div.Imagenes 
+                div.Logo 
+                    img(src="img/Header2.png", alt="", srcset="")
+                div.Flores1
+                    img(src="img/1.png" )
+                div.Flores2
+                    img(src="img/2.png" )
+                div.Flores3
+                    img(src="img/5.png")
+                div.Flores4
+                    img(src="img/6.png" )
+           
         section
             mixin Menus2({...arg})
                 nav 
@@ -106,23 +101,13 @@ html(lang="sp")
             img(src="img/Pasto2.png" width="100")
             img(src="img/Pasto3.png" width="100")
             img(src="img/Pasto1.png" width="100")
-            img(src="img/Pasto2.png" width="100")
-            img(src="img/Pasto3.png" width="100")
-            img(src="img/Pasto1.png" width="100")
-            img(src="img/Pasto4.png" width="80")
-            
-           
-            
-
-           
-
+            img(src="img/Pasto4.png" width="50")
         footer
             
             ul 
                 li Nombre: 
                 li Marly Yurley Torres Silva |
                 li Telefono: 
-                li #[a(href="tel:+57 3016737252") +57 3016737252] |
-                    
+                li #[a(href="tel:+57 3016737252") +57 3016737252] |                 
                 li Diplomado Comfenalco: 
                 li HTML CON PUG Y CSS CON SASS         

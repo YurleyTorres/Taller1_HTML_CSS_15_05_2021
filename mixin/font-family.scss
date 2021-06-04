@@ -1,4 +1,4 @@
-$fuente: 'Orbitron', sans-serif;
+$fuente: 'Shadows Into Light', cursive;
 $fuente_normal: 400;
 $fuente_negrita: 700;
 
@@ -7,9 +7,13 @@ $fuente_negrita: 700;
     // background: blue !important;
     font-family: $fuente;
     font-weight: $fuente_normal;
+    // font-size: 2em;
 }
 @mixin negrita {
     // background: red !important;
     font-family: $fuente;
+    // font-weight: $fuente_normal;
+    // font-size: 2em;
     font-weight: $fuente_negrita;
+    // font-size: 24px;
 }
