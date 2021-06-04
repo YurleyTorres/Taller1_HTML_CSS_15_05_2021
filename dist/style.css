@@ -142,6 +142,22 @@
     bottom: 0em;
   }
 }
+@-webkit-keyframes pastoAnimacion {
+  0% {
+    bottom: -3em;
+  }
+  100% {
+    bottom: 8.4%;
+  }
+}
+@keyframes pastoAnimacion {
+  0% {
+    bottom: -3em;
+  }
+  100% {
+    bottom: 8.4%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -188,7 +204,6 @@ header {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   width: 97.7%;
-  height: 90px;
   text-align: center;
   padding: 0.7em 0.9em;
   background: #fdfdfd;
@@ -207,58 +222,31 @@ header {
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: -1;
+  z-index: -2;
 }
 .Imagenes div img {
   -o-object-fit: scale-down;
      object-fit: scale-down;
   width: 100%;
-  height: 90px;
+  height: 90%;
 }
 
 .Logo {
   -o-object-fit: scale-down;
      object-fit: scale-down;
-  top: 4px !important;
+  top: 16px !important;
   width: 100%;
   height: 90px;
   position: relative;
   left: -25%;
 }
-
-.Flores2 {
-  position: relative;
-  bottom: 4.5em;
-  left: -141px;
-  width: 100%;
-  z-index: 1;
-}
 @media only screen and (max-width: 500px) {
-  .Flores2 {
-    bottom: -55px;
+  .Logo {
+    position: relative !important;
+    top: 16px !important;
+    width: 87% !important;
+    height: 100% !important;
   }
-}
-
-.Flores3 {
-  position: relative;
-  bottom: 8.5em;
-  left: 562px;
-  width: 100%;
-  z-index: 1;
-}
-@media only screen and (max-width: 500px) {
-  .Flores3 {
-    bottom: 300px;
-    left: 35%;
-  }
-}
-
-.Flores4 {
-  position: relative;
-  bottom: 15.5em;
-  left: 153px;
-  width: 100%;
-  z-index: 1;
 }
 
 nav {
@@ -266,7 +254,7 @@ nav {
   font-weight: 400;
   border: 0.1em solid transparent;
   position: static;
-  z-index: 10;
+  z-index: 14;
   text-align: center;
   /* background: red; */
   background: #673ab705;
@@ -337,22 +325,22 @@ section {
   /* background: red; */
   background: rgba(243, 250, 250, 0.527);
   position: fixed;
-  top: 4.44em;
+  top: 3.44em;
   width: 30%;
   margin-right: 0.5%;
   left: -35em;
 }
 section ul li {
+  text-align: center;
   display: block;
-  margin: 0.7em;
+  margin: 0.02em;
+  height: 30px !important;
 }
 section header {
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
   position: static;
-  height: 10px !important;
-  /* background: red; */
 }
 section aside {
   /*Adaptar nuesto contemido*/
@@ -363,12 +351,12 @@ section aside {
   /* background: red; */
 }
 section aside img {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   padding: 0.7em 0;
   z-index: -1;
-  width: 60%;
+  width: 50%;
 }
 section div {
   font-family: "Shadows Into Light", cursive;
@@ -422,7 +410,6 @@ section article header {
   text-align: center;
   font-family: "Shadows Into Light", cursive;
   font-weight: 700;
-  height: 120px !important;
 }
 @media only screen and (max-width: 500px) {
   section article {
@@ -457,6 +444,7 @@ article footer {
   padding: 0.7em 0;
   display: inline-block;
   vertical-align: top;
+  text-align: center;
   width: 95.8%;
 }
 @media only screen and (max-width: 500px) {
@@ -516,7 +504,7 @@ footer a {
     z-index: 10;
     left: none !important;
     bottom: 0 !important;
-    width: 100% !important;
+    width: 95% !important;
   }
 }
 
@@ -603,10 +591,9 @@ footer a {
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   border: 0.1em solid transparent;
-  position: sticky;
+  position: sticky !important;
   display: inline-block;
-  width: 95.8%;
-  background: none !important;
+  width: 85%;
 }
 .noticias footer p {
   font-family: "Shadows Into Light", cursive;
@@ -622,7 +609,7 @@ footer a {
      object-fit: scale-down;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   left: 0;
 }
 @media only screen and (max-width: 500px) {
@@ -631,8 +618,9 @@ footer a {
     height: none !important;
   }
   .noticias footer img {
-    position: relative !important;
-    left: 0;
+    position: absolute !important;
+    left: -10px !important;
+    width: 95% !important;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -696,7 +684,6 @@ footer a {
 @media only screen and (max-width: 500px) {
   .burbujaWhatsapp {
     bottom: 2.5em;
-    right: 9em;
   }
 }
 
@@ -716,12 +703,6 @@ footer a {
   -webkit-animation-name: mover;
           animation-name: mover;
 }
-@media only screen and (max-width: 500px) {
-  .Dino1 {
-    width: 60% !important;
-    left: 60% !important;
-  }
-}
 
 .Dino2 {
   position: fixed;
@@ -738,12 +719,6 @@ footer a {
   -webkit-animation-name: mover;
           animation-name: mover;
   z-index: 8;
-}
-@media only screen and (max-width: 500px) {
-  .Dino2 {
-    width: 60% !important;
-    left: 60% !important;
-  }
 }
 
 .Dino3 {
@@ -762,12 +737,6 @@ footer a {
           animation-name: mover;
   z-index: 8;
 }
-@media only screen and (max-width: 500px) {
-  .Dino3 {
-    width: 60% !important;
-    left: 60% !important;
-  }
-}
 
 .Dino4 {
   position: fixed;
@@ -785,25 +754,14 @@ footer a {
           animation-name: mover;
   z-index: 8;
 }
-@media only screen and (max-width: 500px) {
-  .Dino4 {
-    width: 60% !important;
-    left: 60% !important;
-    -webkit-animation-duration: 5s !important;
-            animation-duration: 5s !important;
-    -webkit-animation-name: mover2 !important;
-            animation-name: mover2 !important;
-  }
-}
 
 .Pasto1 {
-  position: fixed;
+  position: fixed !important;
   bottom: 1.9em;
   left: 0;
   width: 100%;
-  z-index: 10;
-  -webkit-animation-name: footerAnimacion;
-          animation-name: footerAnimacion;
+  -webkit-animation-name: pastoAnimacion;
+          animation-name: pastoAnimacion;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-delay: 0.2s;
@@ -812,12 +770,13 @@ footer a {
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 10;
 }
 @media only screen and (max-width: 500px) {
   .Pasto1 {
-    bottom: -55px;
-    width: 70.5% !important;
-    height: 12.5% !important;
+    bottom: 40px;
+    width: 100% !important;
+    height: 8.2% !important;
   }
 }
 
@@ -858,43 +817,5 @@ footer a {
   }
   100% {
     left: 100%;
-  }
-}
-@-webkit-keyframes mover2 {
-  0% {
-    left: 0%;
-  }
-  25% {
-    left: 25%;
-    z-index: 10;
-  }
-  50% {
-    left: 50%;
-  }
-  75% {
-    left: 55%;
-    z-index: 10;
-  }
-  100% {
-    left: 60%;
-  }
-}
-@keyframes mover2 {
-  0% {
-    left: 0%;
-  }
-  25% {
-    left: 25%;
-    z-index: 10;
-  }
-  50% {
-    left: 50%;
-  }
-  75% {
-    left: 55%;
-    z-index: 10;
-  }
-  100% {
-    left: 60%;
   }
 }
